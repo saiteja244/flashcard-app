@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flashcard Learning App</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#111827" />
+<title>Flashcard Learning App</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Flashcard Learning App</h1>
-  <div class="flashcard-container">
-    <div class="flashcard" id="flashcard">
-      <div class="front">What is JavaScript?</div>
-      <div class="back">JavaScript is a programming language for the web.</div>
-    </div>
+<header class="app-header">
+<h1>Flashcard Learning App</h1>
+<p class="tagline">Learn fast. Remember longer.</p>
+</header>
+
+<main class="container">
+<div class="card-stack">
+<div class="flashcard" id="flashcard" aria-live="polite" tabindex="0">
+<div class="side front" id="front"></div>
+<div class="side back" id="back"></div>
+</div>
+</div>
+<div class="card-info">
+  <span id="boxIndicator">Box: 0/3</span>
+  <div class="progress-container">
+    <div id="progressBar" class="progress-bar"></div>
   </div>
-  <button id="flipBtn">Flip</button>
-  <script src="script.js"></script>
+</div>
+
+
+
+<div class="controls">
+<button id="prevBtn" class="btn">◀ Prev</button>
+<button id="flipBtn" class="btn">Flip</button>
+<button id="nextBtn" class="btn">Next ▶</button>
+</div>
+<div class="controls">
+  <button id="wrongBtn" class="btn">❌ I Forgot</button>
+  <button id="rightBtn" class="btn">✅ I Knew It</button>
+</div>
+</main>
+
+
+<footer class="app-footer">
+<small>Step 1 build — we’ll add multiple cards & progress next.</small>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
